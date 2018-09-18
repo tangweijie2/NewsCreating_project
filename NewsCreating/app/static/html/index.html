@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>文件上传</title>
+    <meta charset="utf-8"/>
+    <script src="http://cdn.bootcss.com/jquery/3.0.0/jquery.min.js"></script>
+    <link href="http://cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+    <form id="showDataForm1" action="http://127.0.0.1/file_upload_1" method="post" enctype="multipart/form-data" target="nm_iframe">
+        <div class="row form-group">
+            <div class="panel panel-primary">
+                <div class="panel-heading" align="center">
+                    <label style="text-align: center;font-size: 18px;">智能新闻写作</label>
+                </div>
+                <div class="panel-body">
+                    <!--action="http://192.168.1.102/file_upload_2" method="post" enctype="multipart/form-data"-->
+                    <!--onsubmit="return saveReport();"-->
+
+                    <form id="showDataForm1" action="http://127.0.0.1/file_upload_1" method="post" enctype="multipart/form-data" target="nm_iframe">
+                        <div class="col-sm-12">
+                            <input id="input1" name="file_tmp" multiple type="file" data-show-caption="true">
+                        </div>
+                        <div class="col-sm-12">
+                            <br><input id="submit2" name="submit" type="submit" value="提交" onclick="getSummary()">
+                        </div>
+                    </form>
+                    <iframe id="id_iframe1" name="nm_iframe1" style="display:none;"></iframe>
+                    <br>
+                    <a href="web2.html" target="_blank">查看结果</a>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<br><br><br><br><br>
+
+<div class="container-fluid">
+        <div class="row form-group">
+            <div class="panel panel-primary">
+                <div class="panel-heading" align="center">
+                    <label style="text-align: center;font-size: 18px;">智能摘要提取</label>
+                </div>
+                <div class="panel-body">
+                    <!--action="http://192.168.1.102/file_upload_2" method="post" enctype="multipart/form-data"-->
+                    <!--onsubmit="return saveReport();"-->
+
+                    <form id="showDataForm" action="http://127.0.0.1/file_upload_2" method="post" enctype="multipart/form-data" target="nm_iframe">
+                    <div class="col-sm-12">
+                        <input id="input2" name="file_tmp" multiple type="file" data-show-caption="true">
+                    </div>
+                    <div class="col-sm-12">
+                        <br><input id="submit2" name="submit" type="submit" value="提交" onclick="getSummary()">
+                    </div>
+                    </form>
+                    <iframe id="id_iframe" name="nm_iframe" style="display:none;"></iframe>
+                    <br>
+                    <a href="web3.html" target="_blank">查看结果</a>
+                </div>
+            </div>
+        </div>
+</div>
+
+
+<!--<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>-->
+<!--<script src="http://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>-->
+<!--<script type="text/javascript">-->
+    <!--function getSummary() {-->
+
+        <!--$.ajax({-->
+            <!--type: "get",-->
+            <!--url: "http://192.168.1.102/summary",  //放接口地址-->
+            <!--// dataType: "json",-->
+            <!--// async: true,-->
+            <!--success: function (data) {-->
+                <!--console.log(data);-->
+                <!--getSummary(data);-->
+            <!--},-->
+            <!--error: function (err) {-->
+                <!--alert("请求失败");-->
+            <!--}-->
+        <!--});-->
+    <!--}-->
+
+
+    <!--function getNews() {-->
+        <!--$.ajax({-->
+            <!--type: "get",-->
+            <!--url: "http://192.168.1.102/summary",  //放接口地址-->
+            <!--// dataType: "json",-->
+            <!--// async: true,-->
+            <!--success: function (data) {-->
+                <!--console.log(data);-->
+                <!--getSummary(data);-->
+            <!--},-->
+            <!--error: function(err) {-->
+                <!--alert("请求失败");-->
+            <!--}-->
+        <!--});-->
+    <!--}-->
+
+    <!--function saveReport() {-->
+        <!--$("#showDataForm").ajaxSubmit({-->
+            <!--url:"http://192.168.1.102/file_upload_2",-->
+            <!--success: function () {-->
+            <!--}-->
+        <!--});-->
+        <!--return false;-->
+    <!--}-->
+</body>
+</html>
